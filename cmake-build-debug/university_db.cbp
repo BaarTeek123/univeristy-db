@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="university_db"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/bartek/KURS_C++/university.db/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/bartek/KURS_C++/university.db/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/bartek/KURS_C++/university.db/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="university_db">
+				<Option output="/home/bartek/KURS_C++/university.db/cmake-build-debug/university_db" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bartek/KURS_C++/university.db/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 university_db"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="university_db/fast">
+				<Option output="/home/bartek/KURS_C++/university.db/cmake-build-debug/university_db" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bartek/KURS_C++/university.db/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 university_db/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bartek/KURS_C++/university.db/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/bartek/KURS_C++/university.db/Address.cpp">
+			<Option target="university_db"/>
+		</Unit>
+		<Unit filename="/home/bartek/KURS_C++/university.db/Address.hpp">
+			<Option target="university_db"/>
+		</Unit>
+		<Unit filename="/home/bartek/KURS_C++/university.db/DataManager.cpp">
+			<Option target="university_db"/>
+		</Unit>
+		<Unit filename="/home/bartek/KURS_C++/university.db/DataManager.hpp">
+			<Option target="university_db"/>
+		</Unit>
+		<Unit filename="/home/bartek/KURS_C++/university.db/Person.cpp">
+			<Option target="university_db"/>
+		</Unit>
+		<Unit filename="/home/bartek/KURS_C++/university.db/Person.hpp">
+			<Option target="university_db"/>
+		</Unit>
+		<Unit filename="/home/bartek/KURS_C++/university.db/Student.cpp">
+			<Option target="university_db"/>
+		</Unit>
+		<Unit filename="/home/bartek/KURS_C++/university.db/Student.hpp">
+			<Option target="university_db"/>
+		</Unit>
+		<Unit filename="/home/bartek/KURS_C++/university.db/UI.cpp">
+			<Option target="university_db"/>
+		</Unit>
+		<Unit filename="/home/bartek/KURS_C++/university.db/UI.hpp">
+			<Option target="university_db"/>
+		</Unit>
+		<Unit filename="/home/bartek/KURS_C++/university.db/main.cpp">
+			<Option target="university_db"/>
+		</Unit>
+		<Unit filename="/home/bartek/KURS_C++/university.db/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
