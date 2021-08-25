@@ -35,8 +35,8 @@ void Person::setGender(const Gender& gender) {
     Person::gender_ = gender;
 }
 
-Person::Person(const std::string & forename,const std::string & name,const std::string & pesel, const Gender& gen, const Address& adress):
-        forename_(forename), name_(name), peselNumber_(pesel), gender_(gen), address_(adress)
+Person::Person(const std::string & forename,const std::string & name,const std::string & pesel, const Gender& gender, const Address& adress):
+        forename_(forename), name_(name), peselNumber_(pesel), gender_(gender), address_(adress)
 {}
 
 Person ::Person(): Person("John", "Smith","",Gender::I_do_not_want_to_pass, Address()) {}

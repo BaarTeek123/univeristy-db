@@ -197,6 +197,33 @@ DataManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/university_db.dir/build.make CMakeFiles/university_db.dir/DataManager.cpp.s
 .PHONY : DataManager.cpp.s
 
+Employee.o: Employee.cpp.o
+
+.PHONY : Employee.o
+
+# target to build an object file
+Employee.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/university_db.dir/build.make CMakeFiles/university_db.dir/Employee.cpp.o
+.PHONY : Employee.cpp.o
+
+Employee.i: Employee.cpp.i
+
+.PHONY : Employee.i
+
+# target to preprocess a source file
+Employee.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/university_db.dir/build.make CMakeFiles/university_db.dir/Employee.cpp.i
+.PHONY : Employee.cpp.i
+
+Employee.s: Employee.cpp.s
+
+.PHONY : Employee.s
+
+# target to generate assembly for a file
+Employee.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/university_db.dir/build.make CMakeFiles/university_db.dir/Employee.cpp.s
+.PHONY : Employee.cpp.s
+
 Person.o: Person.cpp.o
 
 .PHONY : Person.o
@@ -320,6 +347,9 @@ help:
 	@echo "... DataManager.o"
 	@echo "... DataManager.i"
 	@echo "... DataManager.s"
+	@echo "... Employee.o"
+	@echo "... Employee.i"
+	@echo "... Employee.s"
 	@echo "... Person.o"
 	@echo "... Person.i"
 	@echo "... Person.s"

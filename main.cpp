@@ -1,14 +1,12 @@
+#include "Employee.hpp"
 #include <iostream>
-#include <ctime>
-#include "Student.hpp"
-#include "DataManager.hpp"
-#include "UI.hpp"
 
 void updateIndex(std::string&);
 
 
 
 int main() {
+  /* ok
     srand(time(NULL));
     std::vector<std::string>names = {"Smith", "Morgan", "Biden", "Obama", "Dzong Un","Ketchum"};
     std::vector<std::string>forenames = {"Alex", "Ali", "Angel", "Ariel", "Ash", "Ashley", "Kim", "Bay", "Billie",
@@ -20,6 +18,16 @@ int main() {
     userInterface.getDataManager().generateData(forenames,names,pesels, 10);
     userInterface.showMenu();
     return 0;
+    */
+
+  Person janusz{"Janusz","Kowal","02312306296", Address()};
+  Employee employee (janusz, 1700);
+  Employee frania{"Janina","Kowal","01312306296", Gender::Female, Address(), 2400};
+  employee.display();
+  std::cout<<"\n";
+  frania.display();
+
+
 }
 
 //    userInterface.showMenu();

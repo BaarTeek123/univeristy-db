@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/bartek/KURS_C++/university.db/Address.cpp
-Address.hpp
-/home/bartek/KURS_C++/university.db/Address.hpp
-
 /home/bartek/KURS_C++/university.db/Address.hpp
 iostream
 -
@@ -37,6 +33,14 @@ vector
 -
 Student.hpp
 /home/bartek/KURS_C++/university.db/Student.hpp
+
+/home/bartek/KURS_C++/university.db/Employee.cpp
+Employee.hpp
+/home/bartek/KURS_C++/university.db/Employee.hpp
+
+/home/bartek/KURS_C++/university.db/Employee.hpp
+Person.hpp
+/home/bartek/KURS_C++/university.db/Person.hpp
 
 /home/bartek/KURS_C++/university.db/Person.cpp
 Person.hpp
@@ -73,14 +77,8 @@ DataManager.hpp
 /home/bartek/KURS_C++/university.db/DataManager.hpp
 
 /home/bartek/KURS_C++/university.db/main.cpp
+Employee.hpp
+/home/bartek/KURS_C++/university.db/Employee.hpp
 iostream
 -
-ctime
--
-Student.hpp
-/home/bartek/KURS_C++/university.db/Student.hpp
-DataManager.hpp
-/home/bartek/KURS_C++/university.db/DataManager.hpp
-UI.hpp
-/home/bartek/KURS_C++/university.db/UI.hpp
 

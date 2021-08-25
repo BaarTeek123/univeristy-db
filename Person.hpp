@@ -17,7 +17,7 @@ class Person {
 public:
     const Address &getAddress() const;
     Person();
-    Person(const std::string&,const std::string&,const std::string&, const Gender&, const Address& );
+    Person(const std::string & forename,const std::string & name,const std::string & pesel, const Gender& gender, const Address& adress);
     Person (const std::string&, const std::string&,const std::string&, const Address&);
     Person (const std::string&, const std::string&);
     const std::string &getForename() const;
