@@ -25,6 +25,9 @@ public:
     std::string chooseSearchOptions()const ;
     std::string chooseDisplayOptions()const ;
     void addStudent();
+    void addPerson();
+    void addEmployee();
+
 
 };
 

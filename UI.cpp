@@ -123,7 +123,7 @@ void UI::showSearchMenu() {
   } else {
     system("clear");
   }
-  std::vector<std::shared_ptr<Student>> vec;
+  std::vector<std::shared_ptr<Person>> vec;
   if ((caseIgnoreStringCompare(choice, "n")) ||
       (caseIgnoreStringCompare(choice, "name"))) {
     if (dataManager.searchByName(data, vec))
@@ -143,16 +143,20 @@ void UI::showSearchMenu() {
     } else {
       std::cout << "No found.\n";
     }
-  } else if ((caseIgnoreStringCompare(choice, "i")) ||
+  }
+//////////////
+  /*
+   else if ((caseIgnoreStringCompare(choice, "i")) ||
              (caseIgnoreStringCompare(choice, "index"))) {
     if (dataManager.searchByIndex(data, vec)) {
       for (auto &student : vec) {
         std::cout << *student << std::endl;
         std::cout << (*student).getAddress() << std::endl;
       }
-    } else
+    }
+  else
       std::cout << "No found.\n";
-  }
+  }*/
 }
 
 void UI::showSortMenu() {
@@ -178,13 +182,16 @@ void UI::showSortMenu() {
 
     else
       std::cout << "There is no data to sort. " << std::endl;
-  } else if ((caseIgnoreStringCompare(choice, "i")) ||
+  }
+  ////////////////////////////////////////
+  /*
+  else if ((caseIgnoreStringCompare(choice, "i")) ||
              (caseIgnoreStringCompare(choice, "index"))) {
     if (dataManager.sortByIndex())
       std::cout << "Succesfully sorted. " << std::endl;
     else
       std::cout << "There is no data to sort. " << std::endl;
-  }
+  }*/
 }
 
 void UI::showDisplayMenu() {
@@ -202,7 +209,7 @@ std::string UI::chooseSortOptions() const {
   std::cout << "Choose a feature that you want to sort by. " << std::endl;
   std::cout << "'n'/\"name\"- students' name \n";
   std::cout << "'p'/\"pesel\"- student's pesel  \n";
-  std::cout << "'i'/\"index\"- student's index\n";
+  //std::cout << "'i'/\"index\"- student's index\n";
   std::cout << "'q'/\"quit\" - quit \n";
   std::cout << "Your choice: ";
   std::string x;
@@ -224,7 +231,7 @@ std::string UI::chooseSearchOptions() const {
   std::cout << "Choose a feature that you want to search. " << std::endl;
   std::cout << "'n'/\"name\"- students' name \n";
   std::cout << "'p'/\"pesel\"- student's pesel  \n";
-  std::cout << "'i'/\"index\"- student's index";
+//  std::cout << "'i'/\"index\"- student's index";
   std::cout << "\n'q'/\"quit\" - quit \n";
   std::cout << "Your choice: ";
   std::string x;
@@ -236,7 +243,7 @@ std::string UI::chooseDeleteOptions() const {
   std::cout << "Choose a feature that you want to delete by. " << std::endl;
   std::cout << "'n'/\"name\"- students' name \n";
   std::cout << "'p'/\"pesel\"- student's pesel  \n";
-  std::cout << "'i'/\"index\"- student's index\n";
+//  std::cout << "'i'/\"index\"- student's index\n";
   std::cout << "'q'/\"quit\" - quit \n";
   std::cout << "Your choice: ";
   std::string x;
@@ -265,57 +272,7 @@ Gender setGender() {
 
 Address setAddress(Address &);
 
-void UI::addStudent() {
-  std::string forename, name, pesel, index, choice;
-  std::cout << "Please full correctly students' data.\nForname: ";
-  std::getline(std::cin, forename);
-  std::cout << "Name: ";
-  if (std::islower(forename[0]))
-    std::toupper(forename[0]);
-  if (std::islower(name[0]))
-    std::toupper(name[0]);
-  for (auto it = forename.begin() + 1; it != forename.end();
-       std::advance(it, 1)) {
-    if (!std::islower(*it)) {
-      std::tolower(*it);
-    }
-  }
-  for (auto it = name.begin() + 1; it != name.end(); std::advance(it, 1)) {
-    if (!std::islower(*it)) {
-      std::tolower(*it);
-    }
-  }
-  std::getline(std::cin, name);
-  Gender gender = setGender();
-  while (true) {
-    std::cout << "Pesel: ";
-    std::getline(std::cin, pesel);
-    if (dataManager.isPeselUnique(pesel)) {
-      break;
-    } else
-      std::cout << "Something has gone wrong.Please, try again.\n";
-  }
-  std::cout << "\nDoes the student have index number? Input ('y'/'yes' or 'no' "
-               "/ 'n'): ";
-  std::getline(std::cin, choice);
-  if ((caseIgnoreStringCompare("y", choice)) ||
-      (caseIgnoreStringCompare("yes", choice))) {
-    while (true) {
-      std::cout << "Index number (it should have 9 signs): ";
-      std::getline(std::cin, index);
-      if ((index.size() == 9) && (dataManager.isIndexUnique(index))) {
-        break;
-      } else
-        std::cout << "Something has gone wrong.Please, try again.\n";
-    }
-  } else {
-    dataManager.updateIndex();
-    index = dataManager.getLastIndex();
-  }
-  Address address;
-  setAddress(address);
-  Student student(forename, name, pesel, gender, index, address);
-  dataManager.addToDec(std::make_shared<Student>(student));
-}
+//void UI::addPerson(){
+
 
 UI::UI() : dataManager(DataManager()) {}

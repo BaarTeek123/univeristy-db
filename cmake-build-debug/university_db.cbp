@@ -100,6 +100,12 @@
 		<Unit filename="/home/bartek/KURS_C++/university.db/Employee.hpp">
 			<Option target="university_db"/>
 		</Unit>
+		<Unit filename="/home/bartek/KURS_C++/university.db/People_container.cpp">
+			<Option target="university_db"/>
+		</Unit>
+		<Unit filename="/home/bartek/KURS_C++/university.db/People_container.h">
+			<Option target="university_db"/>
+		</Unit>
 		<Unit filename="/home/bartek/KURS_C++/university.db/Person.cpp">
 			<Option target="university_db"/>
 		</Unit>

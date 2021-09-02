@@ -9,6 +9,7 @@ enum class Gender {
 
 
 class Person {
+protected:
     std::string forename_;
     std::string  name_;
     std::string peselNumber_;
@@ -27,6 +28,8 @@ public:
     const std::string &getPeselNumber() const;
     void setPeselNumber(const std::string &peselNumber);
     Gender getGender() const;
+    Gender setGender();
     void setGender(const Gender& gender);
     friend std::ostream& operator << (std::ostream& os, const Person& person);
+    Person addPerson();
 };

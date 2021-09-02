@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/university_db.dir/Address.cpp.o"
   "CMakeFiles/university_db.dir/DataManager.cpp.o"
   "CMakeFiles/university_db.dir/Employee.cpp.o"
+  "CMakeFiles/university_db.dir/People_container.cpp.o"
   "CMakeFiles/university_db.dir/Person.cpp.o"
   "CMakeFiles/university_db.dir/Student.cpp.o"
   "CMakeFiles/university_db.dir/UI.cpp.o"

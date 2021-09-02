@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/bartek/KURS_C++/university.db/Address.cpp" "/home/bartek/KURS_C++/university.db/cmake-build-debug/CMakeFiles/university_db.dir/Address.cpp.o"
   "/home/bartek/KURS_C++/university.db/DataManager.cpp" "/home/bartek/KURS_C++/university.db/cmake-build-debug/CMakeFiles/university_db.dir/DataManager.cpp.o"
   "/home/bartek/KURS_C++/university.db/Employee.cpp" "/home/bartek/KURS_C++/university.db/cmake-build-debug/CMakeFiles/university_db.dir/Employee.cpp.o"
+  "/home/bartek/KURS_C++/university.db/People_container.cpp" "/home/bartek/KURS_C++/university.db/cmake-build-debug/CMakeFiles/university_db.dir/People_container.cpp.o"
   "/home/bartek/KURS_C++/university.db/Person.cpp" "/home/bartek/KURS_C++/university.db/cmake-build-debug/CMakeFiles/university_db.dir/Person.cpp.o"
   "/home/bartek/KURS_C++/university.db/Student.cpp" "/home/bartek/KURS_C++/university.db/cmake-build-debug/CMakeFiles/university_db.dir/Student.cpp.o"
   "/home/bartek/KURS_C++/university.db/UI.cpp" "/home/bartek/KURS_C++/university.db/cmake-build-debug/CMakeFiles/university_db.dir/UI.cpp.o"

@@ -3,20 +3,21 @@
 //
 
 #include "DataManager.hpp"
+#include "Employee.hpp"
 #include <algorithm>
 #include <ctime>
-#include <string>
 #include <random>
+#include <string>
 
 bool caseIgnoreStringCompare(const std::string&, const std::string&);
 
 
 void DataManager::showShortWholeBase () const {
-    if (deqOfStudents.empty())
+    if (deqOfPersons.empty())
         std::cout<<"The base is empty. There is no data to show.\n";
     else{
         int i =1;
-        for (auto &student:deqOfStudents){
+        for (auto &student: deqOfPersons){
             std::cout<<i<<". "<<*student<<std::endl;
             i++;
         }
@@ -24,11 +25,11 @@ void DataManager::showShortWholeBase () const {
 }
 
 void DataManager::showLongWholeBase() const {
-    if (deqOfStudents.empty())
+    if (deqOfPersons.empty())
         std::cout<<"The base is empty. There is no data to show.\n";
     else{
         int i =1;
-        for (auto &student:deqOfStudents){
+        for (auto &student: deqOfPersons){
             std::cout<<i<<". "<<*student<<std::endl;
             std::cout<<(*student).getAddress()<<std::endl;
             i++;
@@ -36,32 +37,35 @@ void DataManager::showLongWholeBase() const {
     }
 }
 
-void DataManager::addToDec(const std::shared_ptr<Student>&student_ptr) {
-    deqOfStudents.push_back(student_ptr);
+void DataManager::addToDec(const std::shared_ptr<Person>&person_ptr) {
+  deqOfPersons.push_back(person_ptr);
 }
 
+/*
 bool DataManager::deleteByIndex(const std::string &index) {
-    if (deqOfStudents.empty())
+    if (deqOfPersons.empty())
         return false;
-    auto it = deqOfStudents.begin();
-    for (auto&student: deqOfStudents){
-        if (index == student->getIndexNumber()) {
-            deqOfStudents.erase(it);
+    auto it = deqOfPersons.begin();
+    for (auto&person: deqOfPersons){
+      if (typeid(*person).name() == "Student"){
+        if (index == person->getIndexNumber()) {
+          deqOfPersons.erase(it);
             return true;
         }
         std::advance(it,1);
     }
     return false;
 }
+*/
 
 bool DataManager::deleteByName(const std::string &name) {
-    if (deqOfStudents.empty())
+    if (deqOfPersons.empty())
         return false;
-    auto it = deqOfStudents.begin();
+    auto it = deqOfPersons.begin();
     int amount = 0;
-    for (auto&student: deqOfStudents){
+    for (auto&student: deqOfPersons){
         if (name == student->getName()) {
-            deqOfStudents.erase(it);
+          deqOfPersons.erase(it);
             amount ++;
         }
         std::advance(it,1);
@@ -72,12 +76,12 @@ bool DataManager::deleteByName(const std::string &name) {
 }
 
 bool DataManager::deleteByPesel(const std::string &pesel) {
-    if (deqOfStudents.empty())
+    if (deqOfPersons.empty())
         return false;
-    auto it = deqOfStudents.begin();
-    for (auto&student: deqOfStudents){
+    auto it = deqOfPersons.begin();
+    for (auto&student: deqOfPersons){
         if (pesel == student->getPeselNumber()) {
-            deqOfStudents.erase(it);
+          deqOfPersons.erase(it);
             return true;
         }
         std::advance(it,1);
@@ -85,12 +89,12 @@ bool DataManager::deleteByPesel(const std::string &pesel) {
     return false;
 }
 
-bool DataManager::searchByName (const std::string &letters, std::vector<std::shared_ptr<Student>>& vec) {
+bool DataManager::searchByName (const std::string &letters, std::vector<std::shared_ptr<Person>>& vec) {
     vec.clear();
-    for (auto& student:deqOfStudents){
-        if (caseIgnoreStringCompare(letters, student->getName().substr(0,letters.size())))
+    for (auto&person : deqOfPersons){
+        if (caseIgnoreStringCompare(letters, person->getName().substr(0,letters.size())))
         {
-            vec.push_back(student);
+            vec.push_back(person);
         }
     }
     vec.shrink_to_fit();
@@ -99,11 +103,11 @@ bool DataManager::searchByName (const std::string &letters, std::vector<std::sha
     return true;
 }
 
-bool DataManager::searchByPesel(const std::string & pesel, std::vector<std::shared_ptr<Student>> & vec) {
+bool DataManager::searchByPesel(const std::string & pesel, std::vector<std::shared_ptr<Person>> & vec) {
     vec.clear();
-    for (auto& student:deqOfStudents){
-        if (pesel == student->getPeselNumber().substr(0,pesel.size())){
-            vec.push_back(student);
+    for (auto&person : deqOfPersons){
+        if (pesel == person->getPeselNumber().substr(0,pesel.size())){
+            vec.push_back(person);
         }
     }
     vec.shrink_to_fit();
@@ -112,9 +116,10 @@ bool DataManager::searchByPesel(const std::string & pesel, std::vector<std::shar
     return true;
 }
 
-bool DataManager::searchByIndex(const std::string & index , std::vector<std::shared_ptr<Student>> & vec) {
+/*
+bool DataManager::searchByIndex(const std::string & index , std::vector<std::shared_ptr<Person>> & vec) {
     vec.clear();
-    for (auto& student:deqOfStudents){
+    for (auto& student: deqOfPersons){
         if (index == student->getIndexNumber().substr(0,index.size())){
             vec.push_back(student);
         }
@@ -124,53 +129,58 @@ bool DataManager::searchByIndex(const std::string & index , std::vector<std::sha
         return false;
     return true;
 }
+*/
 
 struct less_than_key_name
 {
-    inline bool operator() (const std::shared_ptr<Student>& student_1, const std::shared_ptr<Student>&  student_2)
+    inline bool operator() (const std::shared_ptr<Person>&person_1, const std::shared_ptr<Person>&person_2)
     {
-        return (*student_1).getName()< (*student_2).getName();
+        return (*person_1).getName()< (*person_2).getName();
     }
 };
 
 struct less_than_key_pesel
 {
-    inline bool operator() (const std::shared_ptr<Student>& student_1, const std::shared_ptr<Student>&  student_2)
+    inline bool operator() (const std::shared_ptr<Person>&person_1, const std::shared_ptr<Person>&person_2)
     {
-        return (*student_1).getPeselNumber()< (*student_2).getPeselNumber();
+        return (*person_1).getPeselNumber()< (*person_2).getPeselNumber();
     }
 };
 
+/*
 struct less_than_key_index
 {
-    inline bool operator() (const std::shared_ptr<Student>& student_1, const std::shared_ptr<Student>&  student_2)
+    inline bool operator() (const std::shared_ptr<Person>& student_1, const std::shared_ptr<Person>&  student_2)
     {
         return (*student_1).getIndexNumber()< (*student_2).getIndexNumber();
     }
 };
+*/
 
 bool DataManager::sortByName() {
-    if (deqOfStudents.empty())
+    if (deqOfPersons.empty())
         return false;
-    std::sort(deqOfStudents.begin(), deqOfStudents.end(), less_than_key_name());
+    std::sort(deqOfPersons.begin(), deqOfPersons.end(), less_than_key_name());
     return true;
 }
 
 bool DataManager::sortByPesel() {
-    if (deqOfStudents.empty())
+    if (deqOfPersons.empty())
         return false;
-    std::sort(deqOfStudents.begin(), deqOfStudents.end(), less_than_key_pesel());
+    std::sort(deqOfPersons.begin(), deqOfPersons.end(), less_than_key_pesel());
     return true;
 }
 
+/*
 bool DataManager::sortByIndex(){
-    if (deqOfStudents.empty())
+    if (deqOfPersons.empty())
         return false;
-    std::sort(deqOfStudents.begin(), deqOfStudents.end(), less_than_key_index());
+    std::sort(deqOfPersons.begin(), deqOfPersons.end(), less_than_key_index());
     return true;
 }
+*/
 
-void show_vec (const std::vector<std::shared_ptr<Student>>&vec)  {
+void show_vec (const std::vector<std::shared_ptr<Person>>&vec)  {
     for (auto&student:vec){
         std::cout<<*student<<std::endl;
     }
@@ -189,27 +199,51 @@ void DataManager:: generateData(const std::vector<std::string>&vecOfFornames, co
             gender = Gender::Male;
         } else
             gender = Gender::I_do_not_want_to_pass;
-        lastIndex = std::to_string(std::stoll(lastIndex) + 1);
-        Student student = Student(vecOfFornames[(std::rand() + i) % vecOfFornames.size()], vecOfNames[(std::rand() + i) % vecOfNames.size()],
-                                  vecOfPesels[(std::rand() + i) % vecOfPesels.size()], gender, lastIndex, Address());
-        deqOfStudents.push_back(std::make_shared<Student>(student));
+        a = rand() % 3;
+        if (a == 1){
+          Person object = Person (vecOfFornames[(std::rand() + i) % vecOfFornames.size()], vecOfNames[(std::rand() + i) % vecOfNames.size()],
+                                   vecOfPesels[(std::rand() + i) % vecOfPesels.size()], gender, Address());
+          deqOfPersons.push_back(std::make_shared<Person>(object));
+
+
+        }
+        else if (a == 2){
+          const int min_salary = 2000;
+          Employee object = Employee (vecOfFornames[(std::rand() + i) % vecOfFornames.size()], vecOfNames[(std::rand() + i) % vecOfNames.size()],
+                                   vecOfPesels[(std::rand() + i) % vecOfPesels.size()], gender, Address(), ((std::rand() % min_salary)*(std::rand() % 10) + min_salary));
+          deqOfPersons.push_back(std::make_shared<Person>(object));
+
+        }
+        else {
+
+          lastIndex = std::to_string(std::stoll(lastIndex) + 1);
+          Student object = Student(vecOfFornames[(std::rand() + i) % vecOfFornames.size()], vecOfNames[(std::rand() + i) % vecOfNames.size()],
+                                   vecOfPesels[(std::rand() + i) % vecOfPesels.size()], gender, lastIndex, Address());
+          deqOfPersons.push_back(std::make_shared<Person>(object));
+
+
+
+        }
+
     }
 }
 bool DataManager::isPeselUnique(const std::string & pesel) {
-    for (auto&student: deqOfStudents){
+    for (auto&student: deqOfPersons){
         if (pesel == student->getPeselNumber())
             return false;
     }
     return true;
 }
 
+/*
 bool DataManager::isIndexUnique(const std::string &index) {
-    for (auto&student: deqOfStudents){
+    for (auto&student: deqOfPersons){
         if (index == student->getIndexNumber())
             return false;
     }
     return true;
 }
+*/
 
 void DataManager:: updateIndex(){
     constexpr int indexSize = 9;
@@ -219,7 +253,6 @@ void DataManager:: updateIndex(){
             lastIndex.insert(lastIndex.begin(), '0');
         }
     }
-
 }
 
 const std::string &DataManager::getLastIndex() const {

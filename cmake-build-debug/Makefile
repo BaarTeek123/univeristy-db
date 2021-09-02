@@ -224,6 +224,33 @@ Employee.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/university_db.dir/build.make CMakeFiles/university_db.dir/Employee.cpp.s
 .PHONY : Employee.cpp.s
 
+People_container.o: People_container.cpp.o
+
+.PHONY : People_container.o
+
+# target to build an object file
+People_container.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/university_db.dir/build.make CMakeFiles/university_db.dir/People_container.cpp.o
+.PHONY : People_container.cpp.o
+
+People_container.i: People_container.cpp.i
+
+.PHONY : People_container.i
+
+# target to preprocess a source file
+People_container.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/university_db.dir/build.make CMakeFiles/university_db.dir/People_container.cpp.i
+.PHONY : People_container.cpp.i
+
+People_container.s: People_container.cpp.s
+
+.PHONY : People_container.s
+
+# target to generate assembly for a file
+People_container.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/university_db.dir/build.make CMakeFiles/university_db.dir/People_container.cpp.s
+.PHONY : People_container.cpp.s
+
 Person.o: Person.cpp.o
 
 .PHONY : Person.o
@@ -350,6 +377,9 @@ help:
 	@echo "... Employee.o"
 	@echo "... Employee.i"
 	@echo "... Employee.s"
+	@echo "... People_container.o"
+	@echo "... People_container.i"
+	@echo "... People_container.s"
 	@echo "... Person.o"
 	@echo "... Person.i"
 	@echo "... Person.s"

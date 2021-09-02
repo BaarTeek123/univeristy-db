@@ -12,8 +12,6 @@ class Employee : public Person{
 public:
   size_t getSalary() const;
   void setSalary(size_t salary);
-
-public:
   Employee(const Person& person, size_t sallary);
   Employee(const std::string & forename,const std::string & name,const std::string & pesel, const Gender& gender, const Address& adress,size_t sallary);
   void display() const;

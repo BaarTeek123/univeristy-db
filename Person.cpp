@@ -63,3 +63,41 @@ const Address &Person::getAddress() const {
     return address_;
 }
 
+
+Address setAddress(Address &);
+
+Person Person::addPerson() {
+  std::string forename, name, pesel, choice;
+  std::cout << "Please full correctly students' data.\nForname: ";
+  std::getline(std::cin, forename);
+  std::cout << "Name: ";
+  if (std::islower(forename[0]))
+    std::toupper(forename[0]);
+  if (std::islower(name[0]))
+    std::toupper(name[0]);
+  for (auto it = forename.begin() + 1; it != forename.end();
+       std::advance(it, 1)) {
+    if (!std::islower(*it)) {
+      std::tolower(*it);
+    }
+  }
+  for (auto it = name.begin() + 1; it != name.end(); std::advance(it, 1)) {
+    if (!std::islower(*it)) {
+      std::tolower(*it);
+    }
+  }
+  std::getline(std::cin, name);
+  Gender gender = setGender();
+  std::cout << "Pesel: ";
+  std::getline(std::cin, pesel);
+  Address address;
+  setAddress(address);
+  Person person (forename, name, pesel, gender, address);
+  return person;
+}
+Gender Person::setGender() {
+  std::cout<<"Gender: "
+
+
+
+  return Gender::Female; }

@@ -14,20 +14,17 @@
 #include "Student.hpp"
 
 class DataManager {
-    std::deque <std::shared_ptr<Student>>deqOfStudents;
+    std::deque <std::shared_ptr<Person>> deqOfPersons;
     std::string lastIndex="210000000" ;
 public:
     const std::string &getLastIndex() const;
-
-public:
-    void addToDec(const std::shared_ptr<Student>&);
+    void addToDec(const std::shared_ptr<Person>&);
     bool deleteByIndex(const std::string&);
     bool deleteByName(const std::string&);
     bool deleteByPesel(const std::string&);
-    //    bool searchByName(const std::string &, std::vector<std::shared_ptr<Student>>&);
-    bool searchByName(const std::string &, std::vector<std::shared_ptr<Student>>&);
-    bool searchByPesel(const std::string &, std::vector<std::shared_ptr<Student>>&);
-    bool searchByIndex(const std::string &, std::vector<std::shared_ptr<Student>>&);
+    bool searchByName(const std::string &, std::vector<std::shared_ptr<Person>>&);
+    bool searchByPesel(const std::string &, std::vector<std::shared_ptr<Person>>&);
+    bool searchByIndex(const std::string &, std::vector<std::shared_ptr<Person>>&);
     bool sortByName();
     bool sortByPesel();
     bool sortByIndex();
