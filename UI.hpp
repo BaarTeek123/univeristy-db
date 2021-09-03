@@ -4,6 +4,8 @@
 
 #ifndef UNIVERSITY_DB_UI_HPP
 #define UNIVERSITY_DB_UI_HPP
+#pragma once
+
 
 #include <iostream>
 #include "DataManager.hpp"

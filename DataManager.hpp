@@ -4,6 +4,8 @@
 
 #ifndef UNIVERSITY_DB_DATAMANAGER_HPP
 #define UNIVERSITY_DB_DATAMANAGER_HPP
+#pragma once
+
 
 
 
@@ -19,21 +21,21 @@ class DataManager {
 public:
     const std::string &getLastIndex() const;
     void addToDec(const std::shared_ptr<Person>&);
-    bool deleteByIndex(const std::string&);
+    //bool deleteByIndex(const std::string&);
     bool deleteByName(const std::string&);
     bool deleteByPesel(const std::string&);
     bool searchByName(const std::string &, std::vector<std::shared_ptr<Person>>&);
     bool searchByPesel(const std::string &, std::vector<std::shared_ptr<Person>>&);
-    bool searchByIndex(const std::string &, std::vector<std::shared_ptr<Person>>&);
+   // bool searchByIndex(const std::string &, std::vector<std::shared_ptr<Person>>&);
     bool sortByName();
     bool sortByPesel();
-    bool sortByIndex();
+//    bool sortByIndex();
     void showShortWholeBase() const;
     void showLongWholeBase() const;
     void generateData(const std::vector<std::string> &, const std::vector<std::string> &,
                       const std::vector<std::string> &, const int);
     bool isPeselUnique(const std::string&);
-    bool isIndexUnique(const std::string&);
+//    bool isIndexUnique(const std::string&);
     void updateIndex();
 };
 

@@ -106,11 +106,13 @@ void UI::showDeleteMenu() {
       std::cout << "Deleting student failed.\n"; // reverse
   } else if ((caseIgnoreStringCompare(choice, "i")) ||
              (caseIgnoreStringCompare(choice, "index"))) {
-    if (dataManager.deleteByIndex(data)) {
+/*    if (dataManager.deleteByIndex(data)) {
       std::cout << "You have just succesfully deleted student from the base.\n";
     } else
       std::cout << "Deleting student failed.\n";
   }
+  */
+}
 }
 
 void UI::showSearchMenu() {
@@ -255,20 +257,6 @@ UI::UI(const DataManager &dataMan) : dataManager(dataMan) {}
 
 DataManager &UI::getDataManager() { return dataManager; }
 
-Gender setGender() {
-  std::string option;
-  std::cout << "Gender\n1.'m' /  'male' - male, \n2.'f'/ 'female' - female, "
-               "\n3. 'o' / 'other' do not want to pass: ";
-  std::getline(std::cin, option);
-  if ((caseIgnoreStringCompare(option, "m")) ||
-      (caseIgnoreStringCompare("male", option)))
-    return Gender::Male;
-  else if ((caseIgnoreStringCompare(option, "f")) ||
-           (caseIgnoreStringCompare("female", option)))
-    return Gender::Female;
-  else
-    return Gender::I_do_not_want_to_pass;
-}
 
 Address setAddress(Address &);
 

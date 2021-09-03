@@ -1,7 +1,6 @@
 //
 // Created by bartek on 7/16/21.
 //
-
 #include "DataManager.hpp"
 #include "Employee.hpp"
 #include <algorithm>

@@ -4,6 +4,7 @@
 
 #ifndef UNIVERSITY_DB_EMPLOYEE_HPP
 #define UNIVERSITY_DB_EMPLOYEE_HPP
+#pragma once
 
 #include "Person.hpp"
 class Employee : public Person{

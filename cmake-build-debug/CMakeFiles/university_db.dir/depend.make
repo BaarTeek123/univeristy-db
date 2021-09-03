@@ -7,6 +7,7 @@ CMakeFiles/university_db.dir/Address.cpp.o: ../Address.hpp
 CMakeFiles/university_db.dir/DataManager.cpp.o: ../Address.hpp
 CMakeFiles/university_db.dir/DataManager.cpp.o: ../DataManager.cpp
 CMakeFiles/university_db.dir/DataManager.cpp.o: ../DataManager.hpp
+CMakeFiles/university_db.dir/DataManager.cpp.o: ../Employee.hpp
 CMakeFiles/university_db.dir/DataManager.cpp.o: ../Person.hpp
 CMakeFiles/university_db.dir/DataManager.cpp.o: ../Student.hpp
 
@@ -14,6 +15,11 @@ CMakeFiles/university_db.dir/Employee.cpp.o: ../Address.hpp
 CMakeFiles/university_db.dir/Employee.cpp.o: ../Employee.cpp
 CMakeFiles/university_db.dir/Employee.cpp.o: ../Employee.hpp
 CMakeFiles/university_db.dir/Employee.cpp.o: ../Person.hpp
+
+CMakeFiles/university_db.dir/People_container.cpp.o: ../Address.hpp
+CMakeFiles/university_db.dir/People_container.cpp.o: ../People_container.cpp
+CMakeFiles/university_db.dir/People_container.cpp.o: ../People_container.h
+CMakeFiles/university_db.dir/People_container.cpp.o: ../Person.hpp
 
 CMakeFiles/university_db.dir/Person.cpp.o: ../Address.hpp
 CMakeFiles/university_db.dir/Person.cpp.o: ../Person.cpp

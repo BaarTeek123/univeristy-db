@@ -4,7 +4,7 @@
 
 #ifndef UNIVERSITY_DB_STUDENT_HPP
 #define UNIVERSITY_DB_STUDENT_HPP
-
+#pragma once
 
 #include "Person.hpp"
 

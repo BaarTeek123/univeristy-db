@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/bartek/KURS_C++/university.db/Address.cpp
+Address.hpp
+/home/bartek/KURS_C++/university.db/Address.hpp
+
 /home/bartek/KURS_C++/university.db/Address.hpp
 iostream
 -
@@ -13,13 +17,15 @@ iostream
 /home/bartek/KURS_C++/university.db/DataManager.cpp
 DataManager.hpp
 /home/bartek/KURS_C++/university.db/DataManager.hpp
+Employee.hpp
+/home/bartek/KURS_C++/university.db/Employee.hpp
 algorithm
 -
 ctime
 -
-string
--
 random
+-
+string
 -
 
 /home/bartek/KURS_C++/university.db/DataManager.hpp
@@ -41,6 +47,20 @@ Employee.hpp
 /home/bartek/KURS_C++/university.db/Employee.hpp
 Person.hpp
 /home/bartek/KURS_C++/university.db/Person.hpp
+
+/home/bartek/KURS_C++/university.db/People_container.cpp
+People_container.h
+/home/bartek/KURS_C++/university.db/People_container.h
+
+/home/bartek/KURS_C++/university.db/People_container.h
+Person.hpp
+/home/bartek/KURS_C++/university.db/Person.hpp
+iostream
+-
+memory
+-
+vector
+-
 
 /home/bartek/KURS_C++/university.db/Person.cpp
 Person.hpp

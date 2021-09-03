@@ -4,7 +4,7 @@
 
 #ifndef UNIVERSITY_DB_ADDRESS_HPP
 #define UNIVERSITY_DB_ADDRESS_HPP
-
+#pragma once
 
 #include <iostream>
 

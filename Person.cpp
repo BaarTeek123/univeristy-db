@@ -92,12 +92,25 @@ Person Person::addPerson() {
   std::getline(std::cin, pesel);
   Address address;
   setAddress(address);
+  setGender();
   Person person (forename, name, pesel, gender, address);
   return person;
 }
+
+
+bool caseIgnoreStringCompare(const std::string &, const std::string &); //implemented in UI.cpp
+
 Gender Person::setGender() {
-  std::cout<<"Gender: "
-
-
-
-  return Gender::Female; }
+    std::string option;
+    std::cout << "Gender\n1.'m' /  'male' - male, \n2.'f'/ 'female' - female, "
+                 "\n3. 'o' / 'other' do not want to pass: ";
+    std::getline(std::cin, option);
+    if ((caseIgnoreStringCompare(option, "m")) ||
+        (caseIgnoreStringCompare("male", option)))
+      return Gender::Male;
+    else if ((caseIgnoreStringCompare(option, "f")) ||
+             (caseIgnoreStringCompare("female", option)))
+      return Gender::Female;
+    else
+      return Gender::I_do_not_want_to_pass;
+}

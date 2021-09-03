@@ -8,12 +8,18 @@ CMakeFiles/university_db.dir/DataManager.cpp.o
  /home/bartek/KURS_C++/university.db/Address.hpp
  /home/bartek/KURS_C++/university.db/DataManager.cpp
  /home/bartek/KURS_C++/university.db/DataManager.hpp
+ /home/bartek/KURS_C++/university.db/Employee.hpp
  /home/bartek/KURS_C++/university.db/Person.hpp
  /home/bartek/KURS_C++/university.db/Student.hpp
 CMakeFiles/university_db.dir/Employee.cpp.o
  /home/bartek/KURS_C++/university.db/Address.hpp
  /home/bartek/KURS_C++/university.db/Employee.cpp
  /home/bartek/KURS_C++/university.db/Employee.hpp
+ /home/bartek/KURS_C++/university.db/Person.hpp
+CMakeFiles/university_db.dir/People_container.cpp.o
+ /home/bartek/KURS_C++/university.db/Address.hpp
+ /home/bartek/KURS_C++/university.db/People_container.cpp
+ /home/bartek/KURS_C++/university.db/People_container.h
  /home/bartek/KURS_C++/university.db/Person.hpp
 CMakeFiles/university_db.dir/Person.cpp.o
  /home/bartek/KURS_C++/university.db/Address.hpp
